@@ -1,27 +1,17 @@
 package ga.interlli.apps.futebolizando.Model;
 
+import com.orm.SugarRecord;
 import java.io.Serializable;
 
-public class Amigo implements Serializable {
+public class Amigo extends SugarRecord implements Serializable {
 
-    private int id;
-    private String nome;
-    //private Times time;
+    String nome;
 
     public Amigo() {
     }
 
-    public Amigo(int id, String nome) {
-        this.id = id;
+    public Amigo(String nome) {
         this.nome = nome;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNome() {
@@ -31,12 +21,4 @@ public class Amigo implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    /*public Times getTime() {
-        return time;
-    }
-
-    public void setTime(Times time) {
-        this.time = time;
-    }*/
 }
