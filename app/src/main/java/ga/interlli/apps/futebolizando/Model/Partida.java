@@ -3,6 +3,9 @@ package ga.interlli.apps.futebolizando.Model;
 import com.orm.SugarRecord;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Partida extends SugarRecord implements Serializable {
 
@@ -10,15 +13,17 @@ public class Partida extends SugarRecord implements Serializable {
     Time timeB;
     int golsTimeA;
     int golsTimeB;
+    boolean finalizada;
 
     public Partida() {
     }
 
-    public Partida(Time timeA, Time timeB, int golsTimeA, int golsTimeB) {
+    public Partida(Time timeA, Time timeB) {
         this.timeA = timeA;
         this.timeB = timeB;
-        this.golsTimeA = golsTimeA;
-        this.golsTimeB = golsTimeB;
+        this.golsTimeA = 0;
+        this.golsTimeB = 0;
+        this.finalizada = false;
     }
 
     public Time getTimeA() {
@@ -51,5 +56,40 @@ public class Partida extends SugarRecord implements Serializable {
 
     public void setGolsTimeB(int golsTimeB) {
         this.golsTimeB = golsTimeB;
+    }
+
+    public boolean isFinalizada() {
+        return finalizada;
+    }
+
+    public void setFinalizada(boolean finalizada) {
+        this.finalizada = finalizada;
+    }
+
+    public List<Partida> gerarPartidas(){
+        List<Time> times = Time.listAll(Time.class);
+        List<Partida> partidas = new ArrayList<>();
+
+        while(!times.isEmpty()){
+            Collections.shuffle(times);
+            timeA = times.get(0); times.remove(0);
+            timeB = times.get(0); times.remove(0);
+            partidas.add(new Partida(timeA, timeB));
+        }
+
+        return partidas;
+    }
+
+    public boolean finalizarPartida(int idPartida, int golsTimeA, int golsTimeB){
+        Partida partida = Partida.findById(Partida.class, idPartida);
+
+        if(!partida.isFinalizada()){
+            partida.setGolsTimeA(golsTimeA);
+            partida.setGolsTimeB(golsTimeB);
+            partida.setFinalizada(true);
+            return true;
+        } else {
+            return false;
+        }
     }
 }
