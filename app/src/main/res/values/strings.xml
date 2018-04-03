@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Futebolizando</string>
+
+    <string name="btnAmigos">Amigos</string>
+    <string name="btnCadAmigos">Cadastrar amigos</string>
+
+
+
+    <string name="btnPartidas">Partidas</string>
+    <string name="btnGenPartidas">Gerar partidas</string>
+    <string name="btnTimes">Times</string>
 </resources>
