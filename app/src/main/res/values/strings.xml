@@ -5,8 +5,15 @@
     <string name="btnCadAmigos">Cadastrar amigos</string>
 
 
-
     <string name="btnPartidas">Partidas</string>
     <string name="btnGenPartidas">Gerar partidas</string>
     <string name="btnTimes">Times</string>
+    <string name="tvRelatorios">Relatórios</string>
+    <string name="tvMenu">Menu</string>
+    <string name="btnPlacarJogos">Placar (jogos)</string>
+    <string name="btnRanking">Ranking (amigos)</string>
+    <string name="tvAmigos">Amigos</string>
+    <string name="tvCadAmigo">Cadastrar amigo</string>
+    <string name="edtNome">Nome</string>
+    <string name="btnSalvarAmigo">Salvar</string>
 </resources>

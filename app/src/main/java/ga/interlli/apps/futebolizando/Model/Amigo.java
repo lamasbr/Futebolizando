@@ -21,4 +21,9 @@ public class Amigo extends SugarRecord implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    @Override
+    public String toString() {
+        return getNome();
+    }
 }
