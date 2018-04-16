@@ -66,30 +66,28 @@ public class Partida extends SugarRecord implements Serializable {
         this.finalizada = finalizada;
     }
 
-    public List<Partida> gerarPartidas(){
+    public static List<Partida> sortearPartidas(){
         List<Time> times = Time.listAll(Time.class);
         List<Partida> partidas = new ArrayList<>();
 
         while(!times.isEmpty()){
+            Time tA, tB;
             Collections.shuffle(times);
-            timeA = times.get(0); times.remove(0);
-            timeB = times.get(0); times.remove(0);
-            partidas.add(new Partida(timeA, timeB));
+            tA = times.get(0); times.remove(0);
+            tB = times.get(0); times.remove(0);
+            partidas.add(new Partida(tA, tB));
         }
 
         return partidas;
     }
 
-    public boolean finalizarPartida(int idPartida, int golsTimeA, int golsTimeB){
-        Partida partida = Partida.findById(Partida.class, idPartida);
+    public void finalizarPartida(Partida partida, int golsTimeA, int golsTimeB){
+        //Partida partida = Partida.findById(Partida.class, idPartida);
 
-        if(!partida.isFinalizada()){
-            partida.setGolsTimeA(golsTimeA);
-            partida.setGolsTimeB(golsTimeB);
-            partida.setFinalizada(true);
-            return true;
-        } else {
-            return false;
+        if(!this.isFinalizada()){
+            this.setGolsTimeA(golsTimeA);
+            this.setGolsTimeB(golsTimeB);
+            this.setFinalizada(true);
         }
     }
 }

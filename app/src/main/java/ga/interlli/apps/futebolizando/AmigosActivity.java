@@ -41,6 +41,8 @@ public class AmigosActivity extends AppCompatActivity {
             ArrayAdapter<Amigo> adapter = new ArrayAdapter<Amigo>(this, android.R.layout.simple_list_item_1, amigos);
             lvAmigos.setAdapter(adapter);
         }
+        // TODO: Alterar listView de Amigos para customListView e add ícone de EDITAR e EXCLUIR
+
     }
 
     @Override
@@ -53,6 +55,8 @@ public class AmigosActivity extends AppCompatActivity {
             ArrayAdapter<Amigo> adapter = new ArrayAdapter<Amigo>(this, android.R.layout.simple_list_item_1, amigos);
             lvAmigos.setAdapter(adapter);
         }
+        // TODO: Alterar listView de Amigos para customListView e add ícone de EDITAR e EXCLUIR
+
     }
 
     private void binding() {

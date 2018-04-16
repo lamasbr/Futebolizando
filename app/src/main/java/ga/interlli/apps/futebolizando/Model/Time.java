@@ -2,11 +2,29 @@ package ga.interlli.apps.futebolizando.Model;
 
 import com.orm.SugarRecord;
 import java.io.Serializable;
+import java.util.List;
 
 public class Time extends SugarRecord implements Serializable {
 
     Amigo amigo;
     String nomeTime;
+    List<Jogador> jogadores;
+
+    public Time(Amigo amigo, String nomeTime, List<Jogador> jogadores) {
+        this.amigo = amigo;
+        this.nomeTime = nomeTime;
+        this.jogadores = jogadores;
+    }
+
+    public Time(Amigo amigo, String nomeTime) {
+
+        this.amigo = amigo;
+        this.nomeTime = nomeTime;
+    }
+
+    public Time() {
+
+    }
 
     public Amigo getAmigo() {
         return amigo;
@@ -24,13 +42,11 @@ public class Time extends SugarRecord implements Serializable {
         this.nomeTime = nomeTime;
     }
 
-    public Time(Amigo amigo, String nomeTime) {
-
-        this.amigo = amigo;
-        this.nomeTime = nomeTime;
+    public List<Jogador> getJogadores() {
+        return jogadores;
     }
 
-    public Time() {
-
+    public void setJogadores(List<Jogador> jogadores) {
+        this.jogadores = jogadores;
     }
 }
