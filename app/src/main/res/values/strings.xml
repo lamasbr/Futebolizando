@@ -16,4 +16,15 @@
     <string name="tvCadAmigo">Cadastrar amigo</string>
     <string name="edtNome">Nome</string>
     <string name="btnSalvarAmigo">Salvar</string>
+    <string name="btnListViewAmigosEdit">Editar</string>
+    <string name="btnListViewAmigosDelete">Apagar</string>
+    <string name="tvListViewAmigosNome">Nome</string>
+    <string name="tvListViewTimesNome">Nome do time</string>
+    <string name="btnListViewTimesCad">Cadastrar novo time</string>
+    <string name="tvTimes">Times</string>
+    <string name="btnCadTimes">Cadastrar novo time</string>
+    <string name="tvCadTime">Cadastrar time</string>
+    <string name="tvCadTimeSelecioneAmigo">Selecione o amigo:</string>
+    <string name="btnCadTimeSalvar">Salvar</string>
+    <string name="btnCadTimeDelete">Excluir</string>
 </resources>

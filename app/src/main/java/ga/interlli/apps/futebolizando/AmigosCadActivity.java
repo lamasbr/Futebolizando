@@ -12,6 +12,7 @@ public class AmigosCadActivity extends AppCompatActivity {
 
     Button btnSalvarAmigo;
     EditText edtNome;
+    Amigo amigo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +20,22 @@ public class AmigosCadActivity extends AppCompatActivity {
         setContentView(R.layout.activity_amigos_cad);
         binding();
 
+        String operacao = getIntent().getExtras().get("OPERACAO").toString();
+
+        switch (operacao){
+            case "ADD":
+                amigo = new Amigo();
+                break;
+            case "EDIT":
+                long amigoId = (Long) getIntent().getExtras().get("amigoId");
+                amigo = Amigo.findById(Amigo.class, amigoId);
+                edtNome.setText(amigo.getNome());
+                break;
+        }
+
         btnSalvarAmigo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Amigo amigo = new Amigo();
                 amigo.setNome(edtNome.getText().toString());
                 amigo.save();
                 finish();

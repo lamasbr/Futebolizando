@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/tvListViewAmigosNome"
+        android:layout_width="256dip"
+        android:layout_height="48dip"
+        android:layout_marginEnd="4dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="@string/tvListViewAmigosNome"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/ibtnListViewAmigosEdit"
+        android:layout_width="48dip"
+        android:layout_height="48dip"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:background="#d6d7d7"
+        android:contentDescription="@string/btnListViewAmigosEdit"
+        android:src="@drawable/edit"
+        app:srcCompat="@drawable/edit" />
+
+    <ImageButton
+        android:id="@+id/ibtnListViewAmigosDelete"
+        android:layout_width="48dip"
+        android:layout_height="48dip"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:background="#d6d7d7"
+        android:contentDescription="@string/btnListViewAmigosDelete"
+        android:src="@drawable/delete"
+        app:srcCompat="@drawable/delete" />
+</LinearLayout>

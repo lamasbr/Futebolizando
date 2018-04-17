@@ -33,7 +33,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".AmigosActivity" />
-        <activity android:name=".AmigosCadActivity"></activity>
+        <activity android:name=".AmigosCadActivity" />
+        <activity android:name=".TimesCadActivity" />
+        <activity android:name=".TimesActivity"></activity>
     </application>
 
 </manifest>

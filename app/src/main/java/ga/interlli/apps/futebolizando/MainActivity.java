@@ -38,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // TODO: Abre tela para visualizar e cadastrar times dos amigos
+        btnTimes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(getApplicationContext(), TimesActivity.class);
+                startActivityForResult(it, TELA_TIMES);
+            }
+        });
 
         // TODO: Abre tela para visualizar e cadastrar jogadores dos times (escalação)
 
