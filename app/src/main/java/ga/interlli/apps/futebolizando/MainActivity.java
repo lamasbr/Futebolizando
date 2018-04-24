@@ -18,9 +18,10 @@ public class MainActivity extends AppCompatActivity {
     // Telas
     final int TELA_AMIGOS = 1;
     final int TELA_TIMES = 2;
-    final int TELA_PARTIDAS = 3;
-    final int TELA_REL_PLACARJOGOS = 4;
-    final int TELA_REL_RANKING = 5;
+    final int TELA_JOGADORES = 3;
+    final int TELA_PARTIDAS = 4;
+    final int TELA_REL_PLACARJOGOS = 5;
+    final int TELA_REL_RANKING = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -27,4 +27,10 @@
     <string name="tvCadTimeSelecioneAmigo">Selecione o amigo:</string>
     <string name="btnCadTimeSalvar">Salvar</string>
     <string name="btnCadTimeDelete">Excluir</string>
+    <string name="btnTimesCadCadastrarJogador">Cadastrar Jogador</string>
+    <string name="btnTimesCadJogadores">Jogadores</string>
+    <string name="tvJogadores">Jogadores</string>
+    <string name="btnJogadoresCadJogador">Cadastrar Jogador</string>
+    <string name="tvListViewJogadoresNome">Nome do jogador</string>
+    <string name="tvCadJogadorMensagem">Digite o nome do jogador:</string>
 </resources>

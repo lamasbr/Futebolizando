@@ -35,7 +35,8 @@
         <activity android:name=".AmigosActivity" />
         <activity android:name=".AmigosCadActivity" />
         <activity android:name=".TimesCadActivity" />
-        <activity android:name=".TimesActivity"></activity>
+        <activity android:name=".TimesActivity" />
+        <activity android:name=".JogadoresActivity"></activity>
     </application>
 
 </manifest>

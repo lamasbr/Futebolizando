@@ -1,6 +1,8 @@
 package ga.interlli.apps.futebolizando.Model;
 
 import com.orm.SugarRecord;
+import com.orm.dsl.Ignore;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -8,6 +10,8 @@ public class Time extends SugarRecord implements Serializable {
 
     Amigo amigo;
     String nomeTime;
+
+    @Ignore
     List<Jogador> jogadores;
 
     public Time(Amigo amigo, String nomeTime, List<Jogador> jogadores) {

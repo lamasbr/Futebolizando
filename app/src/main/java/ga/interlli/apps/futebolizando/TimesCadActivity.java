@@ -1,5 +1,6 @@
 package ga.interlli.apps.futebolizando;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,10 +16,13 @@ import ga.interlli.apps.futebolizando.Model.Time;
 
 public class TimesCadActivity extends AppCompatActivity {
 
+    // Telas
+    final int TELA_JOGADORES = 3;
+
     List<Amigo> lstAmigos;
     Time time; Amigo amigo;
 
-    Button btnCadTimeSalvar, btnCadTimeDelete;
+    Button btnCadTimeSalvar, btnCadTimeDelete, btnTimesCadJogadores;
     EditText edtCadTimeNome;
     Spinner spnTime;
 
@@ -40,6 +44,8 @@ public class TimesCadActivity extends AppCompatActivity {
                 long timeId = (Long) getIntent().getExtras().get("timeId");
                 time = Time.findById(Time.class, timeId);
                 edtCadTimeNome.setText(time.getNomeTime());
+                btnTimesCadJogadores.setVisibility(View.VISIBLE);
+                funcaoClickBtnJogadores();
                 break;
         }
 
@@ -66,6 +72,7 @@ public class TimesCadActivity extends AppCompatActivity {
     private void binding(){
         btnCadTimeSalvar = (Button) findViewById(R.id.btnCadTimeSalvar);
         btnCadTimeDelete = (Button) findViewById(R.id.btnCadTimeDelete);
+        btnTimesCadJogadores = (Button) findViewById(R.id.btnTimesCadJogadores);
         edtCadTimeNome = (EditText) findViewById(R.id.edtCadTimeNome);
         spnTime = (Spinner) findViewById(R.id.spnTime);
     }
@@ -84,5 +91,16 @@ public class TimesCadActivity extends AppCompatActivity {
                 R.layout.spn_times_cad_amigos_item,
                 amigos);
         spnTime.setAdapter(adapter);
+    }
+
+    private void funcaoClickBtnJogadores(){
+        btnTimesCadJogadores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(getApplicationContext(), JogadoresActivity.class);
+                it.putExtra("timeId", time.getId());
+                startActivityForResult(it, TELA_JOGADORES);
+            }
+        });
     }
 }
