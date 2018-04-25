@@ -47,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnPartidas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(getApplicationContext(), PartidasActivity.class);
+                startActivityForResult(it, TELA_PARTIDAS);
+            }
+        });
+
         // TODO: Abre tela para visualizar e cadastrar jogadores dos times (escalação)
 
         // TODO:

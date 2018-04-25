@@ -71,13 +71,18 @@ public class Partida extends SugarRecord implements Serializable {
         List<Partida> partidas = new ArrayList<>();
 
         while(!times.isEmpty()){
-            Time tA, tB;
-            Collections.shuffle(times);
-            tA = times.get(0); times.remove(0);
-            tB = times.get(0); times.remove(0);
-            partidas.add(new Partida(tA, tB));
-        }
+            if((times.size() % 2) == 0){
+                Partida partida;
+                Time tA, tB;
+                Collections.shuffle(times);
+                tA = times.get(0); times.remove(0);
+                tB = times.get(0); times.remove(0);
+                partida = new Partida(tA, tB);
+                partida.save();
 
+                partidas.add(partida);
+            }
+        }
         return partidas;
     }
 

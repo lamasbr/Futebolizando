@@ -33,4 +33,10 @@
     <string name="btnJogadoresCadJogador">Cadastrar Jogador</string>
     <string name="tvListViewJogadoresNome">Nome do jogador</string>
     <string name="tvCadJogadorMensagem">Digite o nome do jogador:</string>
+    <string name="tvPartidaNomeTimeA">TimeA</string>
+    <string name="tvPartidaNomeTimeB">TimeB</string>
+    <string name="tvPartidaGolsTimeA">0</string>
+    <string name="tvPartidaGolsTimeB">0</string>
+    <string name="tvPartidas">Partidas</string>
+    <string name="btnPartidasGerarPartida">Sortear partidas</string>
 </resources>
