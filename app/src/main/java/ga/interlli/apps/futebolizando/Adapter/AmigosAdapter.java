@@ -24,7 +24,7 @@ public class AmigosAdapter extends BaseAdapter {
     final int TELA_AMIGOS_CAD = 11;
 
     private LayoutInflater layout;
-    private final List<Amigo> amigos;
+    private List<Amigo> amigos;
     private ArrayList<Amigo> arrayList;
     private Context context;
 
@@ -83,10 +83,16 @@ public class AmigosAdapter extends BaseAdapter {
             public void onClick(View v) {
                 Amigo amigoDelete = Amigo.findById(Amigo.class, amigoId);
                 amigoDelete.delete();
-                // TODO: *IMPORTANTE* Atualizar a listView após remover do banco!!
+                amigos = Amigo.listAll(Amigo.class);
+                atualizaListView(amigos);
             }
         });
 
         return view;
+    }
+
+    public void atualizaListView(List<Amigo> amigos){
+        this.amigos = amigos;
+        notifyDataSetChanged();
     }
 }

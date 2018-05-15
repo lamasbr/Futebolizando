@@ -98,6 +98,20 @@
                         android:layout_weight="1"
                         android:text="@string/btnRanking" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnMainZerarTudo"
+                        style="@android:style/Widget.Material.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/btnMainZerarTudo" />
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

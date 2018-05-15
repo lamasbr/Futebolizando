@@ -27,12 +27,11 @@
         android:id="@+id/linearLayout4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinalizarRodada"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPartidas">
@@ -44,13 +43,35 @@
             android:layout_marginBottom="8dp"
             android:text="@string/btnPartidasGerarPartida" />
 
+        <Button
+            android:id="@+id/btnPartidasLimparPartidas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/btnPartidasLimparPartidas" />
+
         <ListView
             android:id="@+id/lvPartidas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
-            android:choiceMode="singleChoice" />
+            android:choiceMode="singleChoice">
+
+        </ListView>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnFinalizarRodada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/btnFinalizarRodada"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
 </android.support.constraint.ConstraintLayout>

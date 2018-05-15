@@ -66,7 +66,7 @@ public class Partida extends SugarRecord implements Serializable {
         this.finalizada = finalizada;
     }
 
-    public static List<Partida> sortearPartidas(){
+    /*public static List<Partida> sortearPartidas(){
         List<Time> times = Time.listAll(Time.class);
         List<Partida> partidas = new ArrayList<>();
 
@@ -84,10 +84,9 @@ public class Partida extends SugarRecord implements Serializable {
             }
         }
         return partidas;
-    }
+    }*/
 
-    public void finalizarPartida(Partida partida, int golsTimeA, int golsTimeB){
-        //Partida partida = Partida.findById(Partida.class, idPartida);
+    public void finalizarPartida(int golsTimeA, int golsTimeB){
 
         if(!this.isFinalizada()){
             this.setGolsTimeA(golsTimeA);
@@ -95,4 +94,17 @@ public class Partida extends SugarRecord implements Serializable {
             this.setFinalizada(true);
         }
     }
+
+    public static void finalizarRodada(List<Partida> partidas){
+        for(Partida partida: partidas){
+            if(!partida.isFinalizada()){
+                partida.isFinalizada();
+            }
+        }
+
+        Jogador artilheiro = Jogador.getArtilheiro();
+        artilheiro.getTime().getAmigo().setPontuacao(artilheiro.getTime().getAmigo().getPontuacao() + 5);
+        artilheiro.getTime().getAmigo().update();
+    }
+
 }

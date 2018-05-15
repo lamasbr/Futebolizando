@@ -53,6 +53,7 @@ public class JogadoresActivity extends AppCompatActivity {
                 final EditText edtCadJogadorNome = (EditText) prompsView.findViewById(R.id.edtCadJogadorNome);
 
                 alertDialogBuilder
+                        .setTitle("Adicionar jogador")
                         .setCancelable(false)
                         .setPositiveButton("OK",
                                 new DialogInterface.OnClickListener() {
@@ -61,6 +62,7 @@ public class JogadoresActivity extends AppCompatActivity {
                                         jogador.setNomeJogador(edtCadJogadorNome.getText().toString());
                                         jogador.save();
                                         atualizaListView(); jogadoresAdapter.atualizaListView(jogadores);
+                                        time.setJogadores(jogadores);
                                     }
                                 })
                         .setNegativeButton("CANCELAR",

@@ -39,4 +39,10 @@
     <string name="tvPartidaGolsTimeB">0</string>
     <string name="tvPartidas">Partidas</string>
     <string name="btnPartidasGerarPartida">Sortear partidas</string>
+    <string name="btnPartidasLimparPartidas">Limpar partidas</string>
+    <string name="btnMainZerarTudo">Apagar todos os dados</string>
+    <string name="btnFinalizaPartidaSalvaPlacar">Salvar placar</string>
+    <string name="tvFinalizaPartidaTimeA">Gols do Time A</string>
+    <string name="tvFinalizaPartidaTimeB">Gols do Time B</string>
+    <string name="btnFinalizarRodada">Finalizar rodada</string>
 </resources>

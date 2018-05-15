@@ -10,22 +10,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
 
-            <!-- Sugar ORM -->
-            <meta-data
-                android:name="DATABASE"
-                android:value="Futebolizando.db" />
-            <meta-data
-                android:name="VERSION"
-                android:value="1" />
-            <meta-data
-                android:name="QUERY_LOG"
-                android:value="true" />
-            <meta-data
-                android:name="DOMAIN_PACKAGE_NAME"
-                android:value="ga.interlli.apps" />
-            <!-- /Sugar ORM -->
+        <!-- Sugar ORM -->
+        <meta-data
+            android:name="DATABASE"
+            android:value="Futebolizando.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="ga.interlli.apps" />
+        <!-- /Sugar ORM -->
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +38,8 @@
         <activity android:name=".TimesCadActivity" />
         <activity android:name=".TimesActivity" />
         <activity android:name=".JogadoresActivity" />
-        <activity android:name=".PartidasActivity"></activity>
+        <activity android:name=".PartidasActivity" />
+        <activity android:name=".PartidasFinalizaActivity"></activity>
     </application>
 
 </manifest>

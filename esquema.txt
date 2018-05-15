@@ -1,38 +1,17 @@
-Cadastro inicial:
+﻿Cadastro inicial:
 - Usuario: zezin
 - Senha: 123456
 - Admin: 1
 
 Cadastros:
-- Cadastro de amigos (tela e BD):
--- id
--- nome
+- Cadastro de amigos (tela e BD): OK
+- Cadastro do time dos amigos (tela e BD): OK
+- Cadastro de jogadores do time (tela e BD): OK
 
-CREATE TABLE "+ TABELA_AMIGOS +" ( "+
-FIELD_AMIGOS_ID +" integer primary key autoincrement, " +
-FIELD_AMIGOS_NOME + " text not null " +
-");";
 
-- Cadastro do time dos amigos (tela e BD):
--- id
--- idAmigo (FK)
--- nomeTime
-
-- Cadastro de jogadores do time (tela e BD):
--- id
--- idTime (FK)
--- nomeJogador
-
-Gerar rodada (tela):
-Informar o placar de cada jogo (tela):
-- Cadastro de partidas (tela e BD):
--- id
--- idTimeA (FK)
--- idTimeB (FK)
--- golsTimeA 
--- golsTimeB
-
-Informar os jogadores que marcaram gols:
+Gerar rodada (tela): OK 
+Informar o placar de cada jogo (tela): OK 
+Informar os jogadores que marcaram gols: OK
 - Cadastro de gols x jogadores (tela e BD):
 -- idPartida (PK)
 -- idJogador (PK)
