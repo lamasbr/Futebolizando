@@ -45,4 +45,5 @@
     <string name="tvFinalizaPartidaTimeA">Gols do Time A</string>
     <string name="tvFinalizaPartidaTimeB">Gols do Time B</string>
     <string name="btnFinalizarRodada">Finalizar rodada</string>
+    <string name="tvRanking">Ranking</string>
 </resources>

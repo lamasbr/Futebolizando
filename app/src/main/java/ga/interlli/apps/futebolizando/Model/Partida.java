@@ -103,8 +103,9 @@ public class Partida extends SugarRecord implements Serializable {
         }
 
         Jogador artilheiro = Jogador.getArtilheiro();
-        artilheiro.getTime().getAmigo().setPontuacao(artilheiro.getTime().getAmigo().getPontuacao() + 5);
-        artilheiro.getTime().getAmigo().update();
+        Amigo amigo = artilheiro.getTime().getAmigo();
+        amigo.setPontuacao(amigo.getPontuacao() + 5);
+        amigo.save();
     }
 
 }

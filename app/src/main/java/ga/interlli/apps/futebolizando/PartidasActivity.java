@@ -62,10 +62,13 @@ public class PartidasActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Partida.finalizarRodada(partidas);
                 btnFinalizarRodada.setEnabled(false);
+                Jogador artilheiro = Jogador.getArtilheiro();
+                mostraSnackbar(v, "Artilheiro: " + Jogador.getArtilheiro().getNomeJogador() +
+                        "\nTime: " + Jogador.getArtilheiro().getTime().getNomeTime(), Snackbar.LENGTH_LONG);
 
                 // TODO: Mostra artilheiro e equipe pertencente
 
-                finish();
+                //finish();
             }
         });
 

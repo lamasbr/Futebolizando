@@ -39,7 +39,8 @@
         <activity android:name=".TimesActivity" />
         <activity android:name=".JogadoresActivity" />
         <activity android:name=".PartidasActivity" />
-        <activity android:name=".PartidasFinalizaActivity"></activity>
+        <activity android:name=".PartidasFinalizaActivity" />
+        <activity android:name=".RankingActivity"></activity>
     </application>
 
 </manifest>

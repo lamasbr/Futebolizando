@@ -28,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
     final int TELA_TIMES = 2;
     final int TELA_JOGADORES = 3;
     final int TELA_PARTIDAS = 4;
-    final int TELA_REL_PLACARJOGOS = 5;
-    final int TELA_REL_RANKING = 6;
+    final int TELA_REL_RANKING = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         binding();
 
-        // Abre tela para visualizar e cadastrar amigos
         btnAmigos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // TODO: Abre tela para visualizar e cadastrar times dos amigos
         btnTimes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,24 +60,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnRelRanking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(getApplicationContext(), RankingActivity.class);
+                startActivityForResult(it, TELA_REL_RANKING);
+            }
+        });
+
         btnMainZerarTudo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 alertaZerarTudo(v);
             }
         });
-
-        // TODO: Abre tela para visualizar e cadastrar jogadores dos times (escalação)
-
-        // TODO:
-
     }
 
     private void binding() {
         btnAmigos = (Button)findViewById(R.id.btnAmigos);
         btnTimes = (Button)findViewById(R.id.btnTimes);
         btnPartidas = (Button)findViewById(R.id.btnPartidas);
-        btnRelPlacarJogos = (Button)findViewById(R.id.btnRelPlacarJogos);
         btnRelRanking = (Button)findViewById(R.id.btnRelRanking);
         btnMainZerarTudo = (Button)findViewById(R.id.btnMainZerarTudo);
     }
